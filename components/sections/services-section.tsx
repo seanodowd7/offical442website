@@ -75,14 +75,8 @@ export function ServicesSection() {
               className="mb-2 font-display font-extrabold uppercase leading-none text-[#F2F2EE]"
               style={{ fontSize: "clamp(2rem, 5vw, 4rem)", letterSpacing: "-0.01em", lineHeight: 1.0 }}
             >
-              The 4-4-2 Playbook: Building Matchday Traffic
-            </h3>
-            <p
-              className="mb-6 font-display font-bold uppercase text-brand-blue"
-              style={{ fontSize: "clamp(1rem, 2.5vw, 1.5rem)", letterSpacing: "0.05em" }}
-            >
               Examples of Our Work
-            </p>
+            </h3>
             <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
               Studio-quality assets tailored to your brand. From weekly match schedules to curated
               game-day content, every post is designed to maximize engagement. Using our precise
