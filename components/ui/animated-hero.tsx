@@ -11,7 +11,7 @@ const titles = [
   "soccer fans",
   "Premier League crowds",
   "Champions League nights",
-  "The World Cup",
+  "World Cup traffic",
 ];
 
 // Isolated component — its state changes never re-render the static headline
@@ -26,19 +26,22 @@ function RotatingWord() {
   }, []);
 
   return (
-    <div className="relative mt-1 w-full">
+    <div
+      className="relative mt-1 w-full overflow-hidden"
+      style={{ height: "clamp(2.8rem, 8.5vw, 7.8rem)" }}
+    >
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.span
           key={currentIndex}
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: "80%" }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -18 }}
+          exit={{ opacity: 0, y: "-80%" }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full text-center font-display font-extrabold uppercase"
+          className="absolute inset-0 flex items-center justify-center font-display font-extrabold uppercase"
           style={{
             fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
             letterSpacing: "-0.01em",
-            lineHeight: 1.1,
+            lineHeight: 1.0,
             background: "linear-gradient(90deg, #FFB800, #FFE066, #C8A951)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -46,7 +49,7 @@ function RotatingWord() {
           }}
         >
           {titles[currentIndex]}
-        </motion.div>
+        </motion.span>
       </AnimatePresence>
     </div>
   );
@@ -86,76 +89,76 @@ export function AnimatedHero() {
       {/* Content — z-10 keeps it above the absolute glow layers */}
       <div className="relative z-10 flex flex-col items-center">
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8 inline-flex items-center gap-2 border border-white/[0.08] bg-white/[0.02] px-3 py-1.5"
+      {/* Badge */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="mb-8 inline-flex items-center gap-2 border border-white/[0.08] bg-white/[0.02] px-3 py-1.5"
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" />
+        <span className="text-[10px] uppercase tracking-[0.2em] text-[#8896B0] sm:text-[11px] sm:tracking-[0.25em]">
+          Premier League / World Cup Marketing
+        </span>
+      </motion.div>
+
+      {/* Static headline — no state dependency, animates once on mount */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+      >
+        <h1
+          className="font-display font-extrabold uppercase leading-none text-white"
+          style={{
+            fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.0,
+          }}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" />
-          <span className="text-[10px] uppercase tracking-[0.2em] text-[#8896B0] sm:text-[11px] sm:tracking-[0.25em]">
-            Premier League / World Cup Marketing
+          Turn your bar into
+          <br />
+          the home for
+        </h1>
+      </motion.div>
+
+      {/* Rotating word — isolated so re-renders stay contained */}
+      <RotatingWord />
+
+      {/* Subtitle */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mx-auto mt-8 max-w-sm px-2 text-sm leading-relaxed text-[#8896B0] sm:max-w-lg sm:text-base lg:text-lg"
+      >
+        The 2026 World Cup begins in June. We help bars build their soccer
+        identity through Premier League advertising, starting now.
+      </motion.p>
+
+      {/* CTAs */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.55 }}
+        className="mt-10 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
+      >
+        <GlassEffect href="https://calendly.com/fourfourtwo-sales/30min" tintColor="rgba(75,139,200,0.18)" className="w-full border border-brand-blue/40 hover:border-brand-blue/70 sm:w-auto">
+          <span className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.15em] text-[#F2F2EE]">
+            <Phone className="h-3.5 w-3.5" />
+            Book a Call
           </span>
-        </motion.div>
-
-        {/* Static headline — no state dependency, animates once on mount */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+        </GlassEffect>
+        <GlassEffect
+          href="/#services"
+          tintColor="rgba(75,139,200,0.18)" className="w-full border border-brand-blue/40 hover:border-brand-blue/70 sm:w-auto"
         >
-          <h1
-            className="font-display font-extrabold uppercase leading-none text-white"
-            style={{
-              fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
-              letterSpacing: "-0.01em",
-              lineHeight: 1.0,
-            }}
-          >
-            Turn your bar into
-            <br />
-            the home for
-          </h1>
-        </motion.div>
-
-        {/* Rotating word — isolated so re-renders stay contained */}
-        <RotatingWord />
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mx-auto mt-8 max-w-sm px-2 text-sm leading-relaxed text-[#8896B0] sm:max-w-lg sm:text-base lg:text-lg"
-        >
-          The 2026 World Cup begins in June. We help bars build their soccer
-          identity through Premier League advertising, starting now.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-10 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
-        >
-          <GlassEffect href="https://calendly.com/fourfourtwo-sales/30min" tintColor="rgba(75,139,200,0.18)" className="w-full border border-brand-blue/40 hover:border-brand-blue/70 sm:w-auto">
-            <span className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.15em] text-[#F2F2EE]">
-              <Phone className="h-3.5 w-3.5" />
-              Book a Call
-            </span>
-          </GlassEffect>
-          <GlassEffect
-            href="/#services"
-            tintColor="rgba(75,139,200,0.18)" className="w-full border border-brand-blue/40 hover:border-brand-blue/70 sm:w-auto"
-          >
-            <span className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.15em] text-[#F2F2EE]">
-              See How It Works
-              <ChevronDown className="h-3.5 w-3.5" />
-            </span>
-          </GlassEffect>
-        </motion.div>
+          <span className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.15em] text-[#F2F2EE]">
+            See How It Works
+            <ChevronDown className="h-3.5 w-3.5" />
+          </span>
+        </GlassEffect>
+      </motion.div>
 
       </div>{/* end z-10 content wrapper */}
     </div>
