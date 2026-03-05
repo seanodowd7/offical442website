@@ -132,8 +132,8 @@ export function AnimatedHero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mx-auto mt-8 max-w-sm px-2 text-sm leading-relaxed text-[#8896B0] sm:max-w-lg sm:text-base lg:text-lg"
       >
-        The 2026 World Cup begins in June. We help bars build their soccer
-        identity through Premier League advertising, starting now.
+        The biggest sporting event in American history is almost here. Fans
+        will choose their home base early. Make sure they choose yours.
       </motion.p>
 
       {/* CTAs */}
