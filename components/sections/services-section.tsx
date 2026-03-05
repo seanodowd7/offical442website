@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Palette, PenLine, Share2, Users, Radio } from "lucide-react";
+import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Palette, PenLine, Share2, Users, Radio, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { GlassEffect } from "@/components/ui/liquid-glass";
 import { FeatureCard, AnimatedContainer } from "@/components/ui/grid-feature-cards";
@@ -38,6 +38,11 @@ const digitalServices: DigitalService[] = [
     title: "Meta Ad Campaigns",
     description: "Precision-targeted Meta ads that put your matchday content in front of local soccer fans — exactly when they're deciding where to watch.",
     icon: Radio,
+  },
+  {
+    title: "Soccer Destination Branding",
+    description: "We build your bar's identity as the go-to soccer venue in your city — consistent tone, visual presence, and community reputation that puts you on every fan's radar long before kickoff.",
+    icon: MapPin,
   },
 ];
 
