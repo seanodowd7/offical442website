@@ -26,9 +26,9 @@ const tiers = [
     popular: false,
     benefits: [
       { text: "8 Graphics", checked: true },
-      { text: "Professional Captions", checked: true },
+      { text: "Professional captions", checked: true },
       { text: "TV Guide", checked: true },
-      { text: "Full Posting Service", checked: true },
+      { text: "Full posting service", checked: true },
     ],
   },
   {
@@ -39,10 +39,10 @@ const tiers = [
     popular: false,
     benefits: [
       { text: "10 Graphics", checked: true },
-      { text: "Professional Captions", checked: true },
+      { text: "Professional captions", checked: true },
       { text: "TV Guide", checked: true },
-      { text: "Full Posting Service", checked: true },
-      { text: "Prematch Stories", checked: true },
+      { text: "Full posting service", checked: true },
+      { text: "Prematch stories", checked: true },
     ],
   },
 ];
