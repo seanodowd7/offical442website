@@ -1,12 +1,19 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Palette, PenLine, Share2, Users, Radio } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { GlassEffect } from "@/components/ui/liquid-glass";
-import { ServiceCarousel, type Service } from "@/components/ui/services-card";
+import { FeatureCard, AnimatedContainer } from "@/components/ui/grid-feature-cards";
 
-const digitalServices: Service[] = [
+type DigitalService = {
+  title: string;
+  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+const digitalServices: DigitalService[] = [
   {
     title: "Professional Graphics",
     description: "Studio-quality match graphics tailored to your venue. Every post features your branding, fixtures, and kickoff times — designed to stop the scroll.",
@@ -125,9 +132,9 @@ export function ServicesSection() {
       </section>
 
       {/* Digital Services */}
-      <section className="border-b border-white/[0.06] py-28 lg:py-36">
+      <section className="border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="reveal">
+          <AnimatedContainer className="mb-14">
             <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
               Digital Services
             </span>
@@ -139,15 +146,21 @@ export function ServicesSection() {
               <br />
               For Matchday Growth
             </h3>
-            <p className="mb-14 max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
+            <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
               We create high-quality match graphics tailored to your venue and
               targeted to local soccer fans. We handle the design and social
               campaigns so you can focus on operations.
             </p>
-          </div>
-          <div className="reveal" style={{ transitionDelay: "0.1s" }}>
-            <ServiceCarousel services={digitalServices} />
-          </div>
+          </AnimatedContainer>
+
+          <AnimatedContainer
+            delay={0.3}
+            className="grid grid-cols-1 divide-y border border-navy-800 sm:grid-cols-2 sm:divide-x md:grid-cols-3 divide-navy-800"
+          >
+            {digitalServices.map((service, i) => (
+              <FeatureCard key={i} feature={service} />
+            ))}
+          </AnimatedContainer>
         </div>
       </section>
     </div>
