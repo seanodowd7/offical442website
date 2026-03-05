@@ -45,9 +45,8 @@ export function WorkShowcase() {
             Every Week.
           </h2>
           <p className="mt-6 text-sm leading-relaxed text-[#8896B0] sm:text-base">
-            Professional, custom-branded graphics delivered to your social media
-            &mdash; so your bar looks like a true soccer destination before every
-            match.
+            The biggest sporting event in American history is almost here. Fans
+            will choose their home base early. Make sure they choose yours.
           </p>
         </div>
 
