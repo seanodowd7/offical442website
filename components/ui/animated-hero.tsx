@@ -86,6 +86,9 @@ export function AnimatedHero() {
         }}
       />
 
+      {/* Content — z-10 keeps it above the absolute glow layers */}
+      <div className="relative z-10 flex flex-col items-center">
+
       {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -106,7 +109,7 @@ export function AnimatedHero() {
         transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
       >
         <h1
-          className="font-display font-extrabold uppercase leading-none text-[#F2F2EE]"
+          className="font-display font-extrabold uppercase leading-none text-white"
           style={{
             fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
             letterSpacing: "-0.01em",
@@ -156,6 +159,8 @@ export function AnimatedHero() {
           </span>
         </GlassEffect>
       </motion.div>
+
+      </div>{/* end z-10 content wrapper */}
     </div>
   );
 }
