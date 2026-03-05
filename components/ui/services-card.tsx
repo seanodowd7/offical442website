@@ -133,7 +133,7 @@ export interface Service {
 const ServiceCard = ({ service }: { service: Service }) => {
   return (
     <div
-      className="group relative flex w-full flex-col overflow-hidden border border-[rgba(75,139,200,0.25)] p-8 transition-all duration-300 hover:border-[rgba(75,139,200,0.55)] hover:shadow-[0_0_0_1px_rgba(75,139,200,0.25),0_0_45px_rgba(75,139,200,0.18)]"
+      className="group relative flex h-full w-full flex-col overflow-hidden border border-[rgba(75,139,200,0.25)] p-8 transition-all duration-300 hover:border-[rgba(75,139,200,0.55)] hover:shadow-[0_0_0_1px_rgba(75,139,200,0.25),0_0_45px_rgba(75,139,200,0.18)]"
       style={{
         background: "linear-gradient(135deg, rgba(75,139,200,0.22) 0%, #0a1020 100%)",
         boxShadow: "0 0 0 1px rgba(75,139,200,0.15), 0 0 30px rgba(75,139,200,0.07)",
@@ -165,8 +165,8 @@ export const ServiceCarousel = ({ services }: { services: Service[] }) => {
       >
         <CarouselContent>
           {services.map((service, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 h-full">
+              <div className="p-1 h-full">
                 <ServiceCard service={service} />
               </div>
             </CarouselItem>
