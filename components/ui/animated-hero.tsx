@@ -37,7 +37,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "-80%" }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 flex items-center justify-center font-display font-extrabold uppercase"
+          className="absolute inset-0 flex items-start justify-center font-display font-extrabold uppercase"
           style={{
             fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
             letterSpacing: "-0.01em",
