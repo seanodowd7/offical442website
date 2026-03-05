@@ -28,7 +28,7 @@ function RotatingWord() {
   return (
     <div
       className="relative mt-1 w-full overflow-hidden"
-      style={{ height: "clamp(2rem, 6.5vw, 6.5rem)" }}
+      style={{ height: "clamp(2.8rem, 8.5vw, 8rem)" }}
     >
       <AnimatePresence mode="wait">
         <motion.span
@@ -39,7 +39,7 @@ function RotatingWord() {
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 flex items-center justify-center font-display font-extrabold uppercase"
           style={{
-            fontSize: "clamp(1.4rem, 5vw, 5rem)",
+            fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
             letterSpacing: "-0.01em",
             lineHeight: 1.0,
             whiteSpace: "nowrap",
