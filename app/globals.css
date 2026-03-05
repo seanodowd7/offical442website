@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── shadcn CSS variables — 4-4-2 navy/blue theme ─── */
+@layer base {
+  :root {
+    --background: 225 50% 6%;       /* #080c18 */
+    --foreground: 48 7% 94%;        /* #F2F2EE */
+    --card: 224 42% 10%;            /* #0f1526 */
+    --card-foreground: 48 7% 94%;
+    --popover: 224 42% 10%;
+    --popover-foreground: 48 7% 94%;
+    --primary: 209 53% 54%;         /* #4B8BC8 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 42% 10%;       /* #0f1526 */
+    --secondary-foreground: 48 7% 94%;
+    --muted: 224 42% 20%;           /* #1e2a4a */
+    --muted-foreground: 219 20% 61%; /* #8896B0 */
+    --accent: 221 37% 26%;          /* #2a3a5c */
+    --accent-foreground: 48 7% 94%;
+    --destructive: 0 84% 60%;       /* #ef4444 */
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 42% 20%;          /* #1e2a4a */
+    --input: 224 42% 20%;
+    --ring: 209 53% 54%;            /* #4B8BC8 */
+    --radius: 0.625rem;
+  }
+}
+
+/* ─── Base ─── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy-950 text-[#F2F2EE] antialiased;
+    font-family: var(--font-body), sans-serif;
+  }
+}
+
+/* ─── Nav link underline animation ─── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #F2F2EE;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Hero gradient overlay ─── */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.45) 0%,
+    rgba(15, 23, 42, 0.65) 50%,
+    rgba(15, 23, 42, 0.98) 100%
+  );
+}
+
+/* ─── AuthKit-style bordered card ─── */
+.authkit-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Work card hover overlay ─── */
+.work-overlay {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+.work-card img {
+  transition: transform 0.5s ease;
+}
+.work-card:hover img {
+  transform: scale(1.025);
+}
+
+/* ─── Contact form fields ─── */
+.form-field {
+  display: block;
+  width: 100%;
+  background: #0f1526;
+  border: 1px solid #1e2a4a;
+  color: #F2F2EE;
+  padding: 14px 16px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.form-field::placeholder {
+  color: #8896B0;
+}
+.form-field:focus {
+  border-color: #4B8BC8;
+}
+
+/* ─── Glass background animation ─── */
+@keyframes shader-fade-down {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shader-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes moveBackground {
+  from { background-position: 0% 0%; }
+  to   { background-position: 0% -1000%; }
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #080c18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a4a;
+}
