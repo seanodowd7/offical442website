@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/#services", label: "Services" },
+  { href: "/#our-work", label: "Our Work" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
@@ -23,7 +23,7 @@ export function Footer() {
               className="mb-5 h-14 w-auto object-contain"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#8896B0]">
-              Turning bars into soccer destinations before the 2026 World Cup.
+              Turning bars into soccer destinations before the 2026 World Cup and beyond
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-3 pt-8 md:flex-row">
           <p className="text-xs text-[#8896B0]">
-            &copy; 2026 4-4-2 Marketing. All rights reserved.
+            &copy; 2026 4-4-2 Marketing
           </p>
           <p className="text-xs text-[#8896B0]">Built for bars. Built for soccer.</p>
         </div>

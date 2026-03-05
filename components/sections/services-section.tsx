@@ -38,31 +38,7 @@ export function ServicesSection() {
   const ref = useScrollReveal();
 
   return (
-    <div id="services" className="scroll-mt-24" ref={ref}>
-      {/* Section header */}
-      <div className="border-b border-navy-800 pb-20 pt-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="reveal">
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-[#8896B0]">
-              What We Offer
-            </p>
-            <h2
-              className="font-display font-extrabold uppercase leading-none text-[#F2F2EE]"
-              style={{
-                fontSize: "clamp(3.5rem, 9vw, 8rem)",
-                letterSpacing: "-0.01em",
-                lineHeight: 0.9,
-              }}
-            >
-              Our Services
-            </h2>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#8896B0]">
-              Everything your bar needs to become the soccer destination in your
-              city, done-for-you, every week.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div id="our-work" className="scroll-mt-24" ref={ref}>
 
       {/* Portfolio / Work Showcase */}
       <section className="border-b border-navy-800 py-28 lg:py-36">
