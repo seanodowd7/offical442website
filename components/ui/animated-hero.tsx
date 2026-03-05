@@ -7,11 +7,11 @@ import { GlassEffect, GlassFilter } from "@/components/ui/liquid-glass";
 import NeuralBackground from "@/components/ui/flow-field-background";
 
 const titles = [
-  "packed matchdays",
-  "soccer fans",
-  "Premier League crowds",
-  "Champions League nights",
-  "World Cup traffic",
+  { text: "packed matchdays",       fontSize: "clamp(2.2rem, 7vw, 6.5rem)" },
+  { text: "soccer fans",            fontSize: "clamp(2.2rem, 7vw, 6.5rem)" },
+  { text: "Premier League crowds",  fontSize: "clamp(1.5rem, 4.8vw, 4.5rem)" },
+  { text: "Champions League nights",fontSize: "clamp(1.4rem, 4.5vw, 4.2rem)" },
+  { text: "World Cup traffic",      fontSize: "clamp(2.2rem, 7vw, 6.5rem)" },
 ];
 
 // Isolated component — its state changes never re-render the static headline
@@ -21,6 +21,7 @@ function RotatingWord() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % titles.length);
+
     }, 2500);
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +40,7 @@ function RotatingWord() {
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 flex items-center justify-center font-display font-extrabold uppercase"
           style={{
-            fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
+            fontSize: titles[currentIndex].fontSize,
             letterSpacing: "-0.01em",
             lineHeight: 1.0,
             whiteSpace: "nowrap",
@@ -49,7 +50,7 @@ function RotatingWord() {
             backgroundClip: "text",
           }}
         >
-          {titles[currentIndex]}
+          {titles[currentIndex].text}
         </motion.span>
       </AnimatePresence>
     </div>
