@@ -51,8 +51,8 @@ export function FinalCta() {
           className="reveal mx-auto mb-12 mt-8 max-w-xl text-sm leading-relaxed text-[#8896B0] sm:text-base"
           style={{ transitionDelay: "0.1s" }}
         >
-          The World Cup starts in June 2026. The bars that start now will be the
-          ones that win. Let&apos;s get your bar on the map.
+          The biggest sporting event in American history is almost here. Fans will choose their home base early. Make sure they choose yours.
+
         </p>
 
         <div

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ArrowRight, Palette, PenLine, Share2, Users, Radio } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
@@ -130,10 +130,10 @@ export interface Service {
 }
 
 // --- Individual Card ---
-const ServiceCard = ({ service }: { service: Service; index: number }) => {
+const ServiceCard = ({ service }: { service: Service }) => {
   return (
     <div
-      className="group relative flex h-[420px] w-full flex-col justify-between overflow-hidden border border-[rgba(75,139,200,0.25)] p-8 transition-all duration-300 hover:border-[rgba(75,139,200,0.55)] hover:shadow-[0_0_0_1px_rgba(75,139,200,0.25),0_0_45px_rgba(75,139,200,0.18)]"
+      className="group relative flex h-[320px] w-full flex-col justify-end overflow-hidden border border-[rgba(75,139,200,0.25)] p-8 transition-all duration-300 hover:border-[rgba(75,139,200,0.55)] hover:shadow-[0_0_0_1px_rgba(75,139,200,0.25),0_0_45px_rgba(75,139,200,0.18)]"
       style={{
         background: "linear-gradient(135deg, rgba(75,139,200,0.22) 0%, #0a1020 100%)",
         boxShadow: "0 0 0 1px rgba(75,139,200,0.15), 0 0 30px rgba(75,139,200,0.07)",
@@ -142,14 +142,10 @@ const ServiceCard = ({ service }: { service: Service; index: number }) => {
       {/* Top accent line */}
       <div className="absolute left-0 right-0 top-0 h-[2px]" style={{ background: "rgba(75,139,200,0.75)" }} />
 
-      {/* Card Content */}
-      <div className="z-10 flex flex-col items-start text-left">
-        <div className="inline-flex h-12 w-12 items-center justify-center border border-[rgba(75,139,200,0.40)] bg-[rgba(75,139,200,0.12)]">
+      <div className="z-10">
+        <div className="mb-5 inline-flex h-12 w-12 items-center justify-center border border-[rgba(75,139,200,0.40)] bg-[rgba(75,139,200,0.12)]">
           <service.icon className="h-6 w-6 text-[#4B8BC8]" />
         </div>
-      </div>
-
-      <div className="z-10">
         <h3 className="mb-3 font-display text-xl font-bold uppercase tracking-wider text-[#F2F2EE]">
           {service.title}
         </h3>
@@ -171,7 +167,7 @@ export const ServiceCarousel = ({ services }: { services: Service[] }) => {
           {services.map((service, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
-                <ServiceCard service={service} index={index} />
+                <ServiceCard service={service} />
               </div>
             </CarouselItem>
           ))}

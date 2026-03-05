@@ -29,7 +29,7 @@ const tiers = [
     price: "$200/mo",
     bestFor: "More match coverage, same great service",
     CTA: "Get Started",
-    popular: true,
+    popular: false,
     benefits: [
       { text: "4 Full Match Schedule posts / month", checked: true },
       { text: "4 Feature Match posts / month", checked: true },
