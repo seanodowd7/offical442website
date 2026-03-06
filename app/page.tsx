@@ -18,7 +18,7 @@ export default function HomePage() {
         className="scroll-mt-24 border-t border-navy-800 px-6 py-28 lg:px-10 lg:py-36"
       >
         <ScrollRevealWrapper>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-3xl text-center">
             <div className="reveal">
               <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
                 Our Story
@@ -67,7 +67,7 @@ export default function HomePage() {
         className="scroll-mt-24 border-t border-navy-800 px-6 py-28 lg:px-10 lg:py-36"
       >
         <ScrollRevealWrapper>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-3xl text-center">
             <div className="reveal">
               <p className="mb-6 text-xs uppercase tracking-[0.3em] text-[#8896B0]">
                 Get In Touch
@@ -86,12 +86,12 @@ export default function HomePage() {
                 <br />
                 <span className="text-brand-blue">Bar.</span>
               </h2>
-              <p className="mb-14 max-w-md leading-relaxed text-[#8896B0]">
+              <p className="mx-auto mb-14 max-w-md leading-relaxed text-[#8896B0]">
                 Book a free 30-minute strategy call. No commitment, no pressure.
                 Just a conversation about how to make your bar the soccer
                 destination in your city.
               </p>
-              <div className="flex justify-start">
+              <div className="flex justify-center">
                 <GlassEffect
                   href="https://calendly.com/fourfourtwo-sales/30min"
                   tintColor="rgba(75,139,200,0.18)"

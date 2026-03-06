@@ -55,7 +55,7 @@ export function ServicesSection() {
       {/* Digital Services */}
       <section id="services" className="scroll-mt-24 border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <AnimatedContainer className="mb-14">
+          <AnimatedContainer className="mb-14 text-center">
             <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
               Digital Services
             </span>
@@ -67,7 +67,7 @@ export function ServicesSection() {
               <br />
               For Matchday Growth
             </h3>
-            <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
               We create high-quality match graphics tailored to your venue and
               targeted to local soccer fans. We handle the design and social
               campaigns so you can focus on operations.
@@ -88,7 +88,7 @@ export function ServicesSection() {
       {/* Portfolio / Work Showcase */}
       <section id="our-work" className="scroll-mt-24 border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="mb-16 reveal">
+          <div className="mb-16 reveal text-center">
             <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
               Portfolio
             </span>
@@ -98,7 +98,7 @@ export function ServicesSection() {
             >
               Examples of Our Work
             </h3>
-            <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
               Studio-quality assets tailored to your brand. From weekly match schedules to curated
               game-day content, every post is designed to maximize engagement. Using our precise
               advertising methods, we connect you with local soccer fans looking for a place to watch.
