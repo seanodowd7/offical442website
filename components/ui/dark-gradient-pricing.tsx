@@ -50,7 +50,7 @@ export const PricingCard = ({
       whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: 0.15 }}
       viewport={{ once: true }}
-      className="flex flex-col"
+      className="flex h-full flex-col"
     >
       <div
         className={cn(

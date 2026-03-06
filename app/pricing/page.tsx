@@ -1,62 +1,11 @@
 import type { Metadata } from "next";
-import { PricingCard } from "@/components/ui/dark-gradient-pricing";
+import PricingSection from "@/components/ui/pricing-section";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
     "Simple, transparent pricing for 4-4-2 Marketing. Choose the package that fits your bar. No long-term contracts, cancel anytime.",
 };
-
-const tiers = [
-  {
-    tier: "Little Kickers",
-    price: "$150/mo",
-    bestFor: "Perfect for bars just getting started",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "4 Full Match Schedule posts / month", checked: true },
-      { text: "2 Feature Match posts / month", checked: true },
-      { text: "Professional Captions included", checked: true },
-      { text: "Full posting service", checked: true },
-      { text: "OpenTable integration", checked: true },
-      { text: "Targeted Meta Ad Campaigns", checked: true },
-      { text: "1 Bonus Match post / month", checked: false },
-    ],
-  },
-  {
-    tier: "Sunday League",
-    price: "$200/mo",
-    bestFor: "More match coverage, same great service",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "4 Full Match Schedule posts / month", checked: true },
-      { text: "4 Feature Match posts / month", checked: true },
-      { text: "Professional captions included", checked: true },
-      { text: "Full posting service", checked: true },
-      { text: "OpenTable integration", checked: true },
-      { text: "Targeted Meta Ad Campaigns", checked: true },
-      { text: "1 Bonus Match post / month", checked: false },
-    ],
-  },
-  {
-    tier: "Full Professional",
-    price: "$250/mo",
-    bestFor: "Maximum coverage for bars that want to dominate",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "4 Full Match Schedule posts / month", checked: true },
-      { text: "6 Feature Match posts / month", checked: true },
-      { text: "Professional captions included", checked: true },
-      { text: "Full posting service", checked: true },
-      { text: "OpenTable integration", checked: true },
-      { text: "Targeted Meta Ad Campaigns", checked: true },
-      { text: "1 Bonus Match post / month", checked: true },
-    ],
-  },
-];
 
 export default function PricingPage() {
   return (
@@ -88,11 +37,7 @@ export default function PricingPage() {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {tiers.map((tier) => (
-              <PricingCard key={tier.tier} {...tier} />
-            ))}
-          </div>
+          <PricingSection />
 
           {/* Footer note */}
           <p className="mt-10 text-center text-xs text-[#8896B0]/60">
