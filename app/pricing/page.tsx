@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PricingSection from "@/components/ui/pricing-section";
+import PricingSection4 from "@/components/ui/pricing-section-4";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -37,7 +37,7 @@ export default function PricingPage() {
           </div>
 
           {/* Cards */}
-          <PricingSection />
+          <PricingSection4 />
 
           {/* Footer note */}
           <p className="mt-10 text-center text-xs text-[#8896B0]/60">
