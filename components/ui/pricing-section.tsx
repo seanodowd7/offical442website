@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { CircleCheck, Circle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 interface PricingFeature {
@@ -78,48 +79,53 @@ function PricingCard({ tier, price, bestFor, cta, href, features, popular }: Pri
   return (
     <div
       className={cn(
-        "flex flex-col border p-6 text-left",
+        "flex flex-col rounded-lg border p-6 text-left",
         popular
-          ? "border-brand-blue/50 bg-gradient-to-br from-brand-blue/10 to-[#0F1526]/80"
-          : "border-white/[0.08] bg-gradient-to-br from-[#080C18]/60 to-[#0F1526]/80",
+          ? "border-brand-blue shadow-lg shadow-brand-blue/10 ring-1 ring-brand-blue/20 bg-[#0F1526]"
+          : "border-white/[0.08] bg-[#0F1526]/60",
       )}
       aria-label={`${tier} plan`}
     >
       {/* Header */}
-      <div className="border-b border-white/[0.08] pb-6 text-center">
-        <div className="mb-4 inline-flex items-center gap-2">
-          <span
+      <div className="text-center">
+        <div className="inline-flex items-center gap-2">
+          <Badge
+            variant={popular ? "default" : "secondary"}
             className={cn(
-              "px-3 py-0.5 text-[10px] uppercase tracking-[0.2em] font-semibold",
+              "rounded-full text-[10px] uppercase tracking-[0.15em]",
               popular
-                ? "bg-brand-blue text-white"
-                : "border border-white/20 text-[#8896B0]",
+                ? "bg-brand-blue text-white border-brand-blue hover:bg-brand-blue/90"
+                : "bg-white/[0.06] text-[#8896B0] border-white/10 hover:bg-white/[0.08]",
             )}
           >
             {tier}
-          </span>
+          </Badge>
           {popular && (
-            <span className="bg-brand-blue/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em] text-brand-blue border border-brand-blue/30">
+            <span className="rounded-full bg-brand-blue/10 px-2 py-0.5 text-[10px] font-medium text-brand-blue border border-brand-blue/20">
               Most Popular
             </span>
           )}
         </div>
-        <p className="mb-1 font-display text-5xl font-extrabold text-[#F2F2EE]">
+
+        <p className="mb-2 mt-4 font-display text-4xl font-extrabold text-[#F2F2EE]">
           {price}
         </p>
         <p className="text-sm text-[#8896B0]">{bestFor}</p>
       </div>
 
+      {/* Divider */}
+      <div className="my-5 border-t border-white/[0.08]" />
+
       {/* Features */}
-      <ul className="flex-1 space-y-3 py-8">
+      <ul className="flex-1 space-y-3">
         {features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-3 text-sm">
+          <li key={i} className="flex items-center gap-2.5 text-sm">
             {feature.checked ? (
               <CircleCheck className="h-4 w-4 flex-shrink-0 text-brand-blue" aria-hidden />
             ) : (
-              <Circle className="h-4 w-4 flex-shrink-0 text-white/20" aria-hidden />
+              <Circle className="h-4 w-4 flex-shrink-0 text-white/15" aria-hidden />
             )}
-            <span className={feature.checked ? "text-[#8896B0]" : "text-white/25 line-through"}>
+            <span className={cn(feature.checked ? "text-[#8896B0]" : "text-white/20 line-through")}>
               {feature.text}
             </span>
           </li>
@@ -127,25 +133,27 @@ function PricingCard({ tier, price, bestFor, cta, href, features, popular }: Pri
       </ul>
 
       {/* CTA */}
-      <Link href={href} className="mt-auto block">
-        <button
-          className={cn(
-            "w-full py-3 text-xs uppercase tracking-[0.15em] transition-colors",
-            popular
-              ? "bg-brand-blue text-white hover:bg-brand-blue/90"
-              : "border border-brand-blue/40 text-[#F2F2EE] hover:border-brand-blue/70 hover:bg-brand-blue/10",
-          )}
-        >
-          {cta}
-        </button>
-      </Link>
+      <div className="mt-6 pt-2">
+        <Link href={href}>
+          <button
+            className={cn(
+              "w-full rounded-md py-2.5 text-sm font-medium transition-colors",
+              popular
+                ? "bg-brand-blue text-white hover:bg-brand-blue/90"
+                : "border border-white/10 bg-white/[0.04] text-[#F2F2EE] hover:bg-white/[0.08]",
+            )}
+          >
+            {cta}
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
 
 export default function PricingSection() {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 min-[900px]:grid-cols-3">
       {pricingData.map((plan) => (
         <PricingCard key={plan.tier} {...plan} />
       ))}
