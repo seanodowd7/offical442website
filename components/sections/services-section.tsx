@@ -50,7 +50,7 @@ export function ServicesSection() {
   const ref = useScrollReveal();
 
   return (
-    <div id="our-work" className="scroll-mt-24" ref={ref}>
+    <div ref={ref}>
 
       {/* Digital Services */}
       <section className="border-b border-navy-800 py-28 lg:py-36">
@@ -86,7 +86,7 @@ export function ServicesSection() {
       </section>
 
       {/* Portfolio / Work Showcase */}
-      <section className="border-b border-navy-800 py-28 lg:py-36">
+      <section id="our-work" className="scroll-mt-24 border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-16 reveal">
             <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
