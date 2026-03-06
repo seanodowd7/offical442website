@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services-section";
-import PricingSection4 from "@/components/ui/pricing-section-4";
 import { ScrollRevealWrapper } from "@/components/ui/scroll-reveal-wrapper";
 import { GlassEffect } from "@/components/ui/liquid-glass";
 
@@ -12,42 +11,6 @@ export default function HomePage() {
 
       {/* Services */}
       <ServicesSection />
-
-      {/* Pricing */}
-      <section
-        id="pricing"
-        className="scroll-mt-24 border-t border-navy-800 px-6 py-28 lg:px-10 lg:py-36"
-      >
-        <ScrollRevealWrapper>
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-16 text-center reveal">
-              <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
-                Investment
-              </span>
-              <h2
-                className="mb-6 font-display font-extrabold uppercase leading-none text-[#F2F2EE]"
-                style={{
-                  fontSize: "clamp(3rem, 8vw, 7rem)",
-                  letterSpacing: "-0.01em",
-                  lineHeight: 0.9,
-                }}
-              >
-                Package Pricing
-              </h2>
-              <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
-                Choose what fits you. All packages are totally customizable and
-                include professional design and writing, plus direct posting on
-                your social channels to save you time. We highly recommend
-                starting with Premier League content today and shifting into World
-                Cup content as the tournament approaches.
-              </p>
-            </div>
-            <div className="reveal" style={{ transitionDelay: "0.1s" }}>
-              <PricingSection4 />
-            </div>
-          </div>
-        </ScrollRevealWrapper>
-      </section>
 
       {/* About */}
       <section
