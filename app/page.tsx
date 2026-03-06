@@ -1,51 +1,8 @@
 import { Hero } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services-section";
-import { PricingCard } from "@/components/ui/dark-gradient-pricing";
+import PricingSection4 from "@/components/ui/pricing-section-4";
 import { ScrollRevealWrapper } from "@/components/ui/scroll-reveal-wrapper";
 import { GlassEffect } from "@/components/ui/liquid-glass";
-
-const tiers = [
-  {
-    tier: "Little Kickers",
-    price: "$150/mo",
-    bestFor: "Perfect for bars just getting started",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "6 Graphics", checked: true },
-      { text: "Professional captions", checked: true },
-      { text: "TV Guide", checked: true },
-      { text: "Full posting service", checked: true },
-    ],
-  },
-  {
-    tier: "Sunday League",
-    price: "$200/mo",
-    bestFor: "More match coverage, same great service",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "8 Graphics", checked: true },
-      { text: "Professional captions", checked: true },
-      { text: "TV Guide", checked: true },
-      { text: "Full posting service", checked: true },
-    ],
-  },
-  {
-    tier: "Full Professional",
-    price: "$250/mo",
-    bestFor: "Maximum coverage for bars that want to dominate",
-    CTA: "Get Started",
-    popular: false,
-    benefits: [
-      { text: "10 Graphics", checked: true },
-      { text: "Professional captions", checked: true },
-      { text: "TV Guide", checked: true },
-      { text: "Full posting service", checked: true },
-      { text: "Prematch stories", checked: true },
-    ],
-  },
-];
 
 export default function HomePage() {
   return (
@@ -85,10 +42,8 @@ export default function HomePage() {
                 Cup content as the tournament approaches.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 reveal" style={{ transitionDelay: "0.1s" }}>
-              {tiers.map((tier) => (
-                <PricingCard key={tier.tier} {...tier} />
-              ))}
+            <div className="reveal" style={{ transitionDelay: "0.1s" }}>
+              <PricingSection4 />
             </div>
           </div>
         </ScrollRevealWrapper>
