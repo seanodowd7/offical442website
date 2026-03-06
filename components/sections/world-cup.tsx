@@ -31,7 +31,7 @@ export function WorldCupSpotlight() {
               <p>
                 For the first time since 1994, the FIFA World Cup comes to the
                 United States. Forty-eight nations. Over sixty matches. A global
-                audience of 5+ billion &mdash; and millions of those fans will be
+                audience of 5+ billion, and millions of those fans will be
                 right here in America, looking for the perfect bar to watch.
               </p>
               <p>
@@ -64,7 +64,7 @@ export function WorldCupSpotlight() {
             <div className="border border-white/[0.08]">
               <Image
                 src="https://images.unsplash.com/photo-1540747913346-19212a4a745d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
-                alt="Packed soccer stadium — World Cup atmosphere"
+                alt="Packed soccer stadium, World Cup atmosphere"
                 width={900}
                 height={680}
                 className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[560px]"

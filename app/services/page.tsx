@@ -30,7 +30,7 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#8896B0]">
             Everything your bar needs to become the soccer destination in your
-            city &mdash; done-for-you, every week.
+            city, done for you, every week.
           </p>
         </div>
       </section>
@@ -53,26 +53,26 @@ export default function ServicesPage() {
               </h2>
               <p className="mb-8 leading-relaxed text-[#8896B0]">
                 We design and deliver custom-branded social media graphics for
-                your bar every single week of the Premier League season &mdash;
+                your bar every single week of the Premier League season,
                 so you always have professional content ready before every match.
               </p>
               <ul className="mb-10 space-y-4">
                 {[
                   {
                     title: "Match Day Graphics",
-                    desc: "Bold, hype-building posters for every featured match — your logo, your specials, your address.",
+                    desc: "Bold, hype-building posters for every featured match, your logo, your specials, your address.",
                   },
                   {
                     title: "Weekly Schedule Posts",
-                    desc: "Branded Premier League fixture graphics showing the full week's matches — times, teams, and your drink specials.",
+                    desc: "Branded Premier League fixture graphics showing the full week's matches, with times, teams, and your drink specials.",
                   },
                   {
                     title: "Ready-to-Post Files",
-                    desc: "Optimized for Instagram, Facebook, and X. No editing required — just download and post.",
+                    desc: "Optimized for Instagram, Facebook, and X. No editing required. Just download and post.",
                   },
                   {
                     title: "Your Brand, Always On",
-                    desc: "Every graphic includes your logo, colors, and details — consistent professionalism, week after week.",
+                    desc: "Every graphic includes your logo, colors, and details for consistent professionalism, week after week.",
                   },
                 ].map(({ title, desc }) => (
                   <li
@@ -123,7 +123,7 @@ export default function ServicesPage() {
             <div className="order-2 lg:order-1">
               <Image
                 src="https://images.unsplash.com/photo-1540747913346-19212a4a745d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Packed soccer stadium — fans watching the match"
+                alt="Packed soccer stadium with fans watching the match"
                 width={1000}
                 height={440}
                 className="h-72 w-full object-cover lg:h-[440px]"
@@ -146,22 +146,22 @@ export default function ServicesPage() {
               </h2>
               <p className="mb-8 leading-relaxed text-[#8896B0]">
                 Match day graphics are just the beginning. We run targeted
-                campaigns that actively drive soccer fans through your door
-                &mdash; on the mornings and afternoons when you need them most.
+                campaigns that actively drive soccer fans through your door,
+                on the mornings and afternoons when you need them most.
               </p>
               <ul className="mb-10 space-y-4">
                 {[
                   {
                     title: "Watch Party Campaigns",
-                    desc: "Promoted event posts for big matches — Champions League, rivalry games, and World Cup qualifiers.",
+                    desc: "Promoted event posts for big matches, including Champions League, rivalry games, and World Cup qualifiers.",
                   },
                   {
                     title: "Happy Hour Tie-ins",
-                    desc: "Link your drink specials to kickoff times — so fans have a reason to arrive early and stay late.",
+                    desc: "Link your drink specials to kickoff times so fans have a reason to arrive early and stay late.",
                   },
                   {
                     title: "Community Building",
-                    desc: "We help you grow a loyal soccer community at your bar — fans who come back every single match day.",
+                    desc: "We help you grow a loyal soccer community at your bar. Fans who come back every single match day.",
                   },
                 ].map(({ title, desc }) => (
                   <li
@@ -203,7 +203,7 @@ export default function ServicesPage() {
               <p className="mb-8 leading-relaxed text-[#8896B0]">
                 Reach soccer fans in your city with laser-targeted ads on the
                 platforms they use every day. We handle the strategy, creative,
-                and targeting &mdash; you just watch the seats fill up.
+                and targeting. You just watch the seats fill up.
               </p>
               <ul className="mb-10 space-y-4">
                 {[
@@ -221,7 +221,7 @@ export default function ServicesPage() {
                   },
                   {
                     title: "Monthly Reporting",
-                    desc: "Clear, plain-English reports showing reach, impressions, and results — no jargon, just numbers that matter.",
+                    desc: "Clear, plain-English reports showing reach, impressions, and results. No jargon, just numbers that matter.",
                   },
                 ].map(({ title, desc }) => (
                   <li
@@ -243,7 +243,7 @@ export default function ServicesPage() {
             <div>
               <Image
                 src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Soccer stadium lights — reaching the right fans"
+                alt="Soccer stadium lights reaching the right fans"
                 width={1000}
                 height={440}
                 className="h-[440px] w-full object-cover"
@@ -469,7 +469,7 @@ export default function ServicesPage() {
           </h2>
           <p className="mx-auto mb-12 max-w-lg text-lg leading-relaxed text-[#8896B0]">
             Book a free strategy call and we&apos;ll map out exactly how to make
-            your bar the soccer destination in your city &mdash; before the
+            your bar the soccer destination in your city, before the
             World Cup begins.
           </p>
           <GlassEffect href="/contact" tintColor="rgba(75,139,200,0.18)" className="border border-brand-blue/40 hover:border-brand-blue/70">

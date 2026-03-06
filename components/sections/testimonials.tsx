@@ -5,7 +5,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const quotes = [
   {
     quote:
-      "We went from zero soccer presence to having a packed house for every Premier League weekend. The content looks incredibly professional — our regulars can't believe we do it ourselves.",
+      "We went from zero soccer presence to having a packed house for every Premier League weekend. The content looks incredibly professional. Our regulars can't believe we do it ourselves.",
     name: "Mike R.",
     role: "Owner",
     bar: "The Anchor Sports Bar, Chicago",
@@ -13,7 +13,7 @@ const quotes = [
   },
   {
     quote:
-      "I didn't know anything about soccer before 4-4-2 came in. Now we're the go-to spot in our neighborhood. The World Cup can't come soon enough — we'll be ready.",
+      "I didn't know anything about soccer before 4-4-2 came in. Now we're the go-to spot in our neighborhood. The World Cup can't come soon enough. We'll be ready.",
     name: "Dana K.",
     role: "General Manager",
     bar: "Field & Tap, Austin",
@@ -66,7 +66,7 @@ export function Testimonials() {
                 <div>
                   <p className="text-sm font-medium text-[#F2F2EE]">{name}</p>
                   <p className="text-xs text-[#8896B0]">
-                    {role} &mdash; {bar}
+                    {role}, {bar}
                   </p>
                 </div>
               </div>

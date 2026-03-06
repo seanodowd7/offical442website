@@ -4,7 +4,7 @@ import { PricingCard } from "@/components/ui/dark-gradient-pricing";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent pricing for 4-4-2 Marketing. Choose the package that fits your bar — no long-term contracts, cancel anytime.",
+    "Simple, transparent pricing for 4-4-2 Marketing. Choose the package that fits your bar. No long-term contracts, cancel anytime.",
 };
 
 const tiers = [
@@ -17,7 +17,7 @@ const tiers = [
     benefits: [
       { text: "4 Full Match Schedule posts / month", checked: true },
       { text: "2 Feature Match posts / month", checked: true },
-      { text: "Professional captions included", checked: true },
+      { text: "Professional Captions included", checked: true },
       { text: "Full posting service", checked: true },
       { text: "OpenTable integration", checked: true },
       { text: "Targeted Meta Ad Campaigns", checked: true },

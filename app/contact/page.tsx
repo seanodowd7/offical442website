@@ -31,8 +31,8 @@ export default function ContactPage() {
           </h1>
 
           <p className="mx-auto mb-14 max-w-md leading-relaxed text-[#8896B0]">
-            Book a free 30-minute strategy call. No commitment, no pressure —
-            just a conversation about how to make your bar the soccer
+            Book a free 30-minute strategy call. No commitment, no pressure.
+            Just a conversation about how to make your bar the soccer
             destination in your city.
           </p>
 

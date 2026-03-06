@@ -8,7 +8,7 @@ const features = [
   {
     icon: Megaphone,
     title: "Social Media Content",
-    desc: "Match-day graphics, weekly schedules, and branded posts — delivered every week.",
+    desc: "Match-day graphics, weekly schedules, and branded posts, delivered every week.",
   },
   {
     icon: CalendarDays,
@@ -18,7 +18,7 @@ const features = [
   {
     icon: BarChart2,
     title: "Targeted Ads",
-    desc: "Meta campaigns targeted at local soccer fans — putting your bar in front of the right crowd.",
+    desc: "Meta campaigns targeted at local soccer fans, putting your bar in front of the right crowd.",
   },
 ];
 
@@ -55,7 +55,7 @@ export function WorkShowcase() {
           <div className="group relative overflow-hidden border border-white/[0.08]">
             <Image
               src="/images/work-gameday.jpg"
-              alt="Sample match day graphic — Arsenal vs Man United"
+              alt="Sample match day graphic for Arsenal vs Man United"
               width={800}
               height={600}
               className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"

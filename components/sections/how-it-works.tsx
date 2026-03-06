@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     icon: Megaphone,
     title: "We Create Your Content",
-    desc: "Custom-branded match graphics, Premier League schedule posts, and event promotions — tailored to your bar.",
+    desc: "Custom-branded match graphics, Premier League schedule posts, and event promotions tailored to your bar.",
   },
   {
     number: "02",

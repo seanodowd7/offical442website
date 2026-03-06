@@ -121,7 +121,7 @@ export default function HomePage() {
                 <p>
                   4-4-2 is a soccer-first marketing agency built for bars. We exist
                   to turn ordinary venues into the go-to soccer destinations in their
-                  city — before the biggest sporting event in the world arrives on
+                  city, before the biggest sporting event in the world arrives on
                   American soil.
                 </p>
                 <p>
@@ -134,7 +134,7 @@ export default function HomePage() {
                   When the 2026 World Cup was awarded to the United States, everything
                   clicked. America is on the verge of a soccer explosion. Bars are
                   perfectly positioned to be at the center of it. Most just
-                  don&apos;t know how yet — and that&apos;s exactly the gap we fill.
+                  don&apos;t know how yet. That&apos;s exactly the gap we fill.
                 </p>
               </div>
             </div>
@@ -168,8 +168,8 @@ export default function HomePage() {
                 <span className="text-brand-blue">Bar.</span>
               </h2>
               <p className="mx-auto mb-14 max-w-md leading-relaxed text-[#8896B0]">
-                Book a free 30-minute strategy call. No commitment, no pressure —
-                just a conversation about how to make your bar the soccer
+                Book a free 30-minute strategy call. No commitment, no pressure.
+                Just a conversation about how to make your bar the soccer
                 destination in your city.
               </p>
               <div className="flex justify-center">

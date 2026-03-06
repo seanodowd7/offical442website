@@ -16,7 +16,7 @@ type DigitalService = {
 const digitalServices: DigitalService[] = [
   {
     title: "Professional Graphics",
-    description: "Studio-quality match graphics tailored to your venue. Every post features your branding, fixtures, and kickoff times — designed to stop the scroll.",
+    description: "Studio-quality match graphics tailored to your venue. Every post features your branding, fixtures, and kickoff times, designed to stop the scroll.",
     icon: Palette,
   },
   {
@@ -26,7 +26,7 @@ const digitalServices: DigitalService[] = [
   },
   {
     title: "Full Posting Service",
-    description: "We handle scheduling and posting across your social channels every week. No effort required from you — just show up on matchday.",
+    description: "We handle scheduling and posting across your social channels every week. No effort required from you. Just show up on matchday.",
     icon: Share2,
   },
   {
@@ -36,12 +36,12 @@ const digitalServices: DigitalService[] = [
   },
   {
     title: "Meta Ad Campaigns",
-    description: "Precision-targeted Meta ads that put your matchday content in front of local soccer fans — exactly when they're deciding where to watch.",
+    description: "Precision-targeted Meta ads that put your matchday content in front of local soccer fans, right when they're deciding where to watch.",
     icon: Radio,
   },
   {
     title: "Soccer Destination Branding",
-    description: "We build your bar's identity as the go-to soccer venue in your city — consistent tone, visual presence, and community reputation that puts you on every fan's radar long before kickoff.",
+    description: "We build your bar's identity as the go-to soccer venue in your city with consistent tone, visual presence, and community reputation that puts you on every fan's radar long before kickoff.",
     icon: MapPin,
   },
 ];
