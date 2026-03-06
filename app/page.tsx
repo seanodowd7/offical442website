@@ -78,7 +78,7 @@ export default function HomePage() {
                 Package Pricing
               </h2>
               <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
-                Choose what fits you. All packages are totally customizable and
+                Test.Choose what fits you. All packages are totally customizable and
                 include professional design and writing, plus direct posting on
                 your social channels to save you time. We highly recommend
                 starting with Premier League content today and shifting into World
