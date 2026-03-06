@@ -19,9 +19,9 @@ export function Footer() {
             <Image
               src="/images/logo.png"
               alt="442 Marketing"
-              width={56}
-              height={56}
-              className="mb-5 h-14 w-auto object-contain"
+              width={80}
+              height={80}
+              className="mb-5 h-20 w-auto object-contain"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#8896B0]">
               Turning bars into soccer destinations before the 2026 World Cup and beyond.
