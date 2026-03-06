@@ -49,7 +49,7 @@ function RotatingWord() {
 
 export function AnimatedHero() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-start justify-center overflow-hidden bg-background px-6 py-24 sm:py-32 lg:px-10">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background px-6 py-24 text-center sm:py-32">
       {/* Flow field background */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-40">
         <NeuralBackground
@@ -79,7 +79,7 @@ export function AnimatedHero() {
       />
 
       {/* Content — z-10 keeps it above the absolute glow layers */}
-      <div className="relative z-10 flex w-full max-w-4xl flex-col items-start">
+      <div className="relative z-10 flex flex-col items-center">
 
         {/* Badge */}
         <motion.div
@@ -101,7 +101,7 @@ export function AnimatedHero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
         >
           <h1
-            className="font-display font-extrabold uppercase leading-none text-white"
+            className="font-display font-extrabold uppercase leading-none text-white text-center"
             style={{
               fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
               letterSpacing: "-0.01em",
@@ -121,7 +121,7 @@ export function AnimatedHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 max-w-lg text-sm leading-relaxed text-[#8896B0] sm:text-base lg:text-lg"
+          className="mx-auto mt-8 max-w-sm px-2 text-sm leading-relaxed text-[#8896B0] sm:max-w-lg sm:text-base lg:text-lg"
         >
           The biggest sporting event in American history is almost here. Fans
           will choose their home base early. Make sure they choose yours.
@@ -132,7 +132,7 @@ export function AnimatedHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-10 flex w-full flex-col items-start gap-3 sm:flex-row sm:justify-start sm:gap-4"
+          className="mt-10 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
         >
           <GlassEffect href="https://calendly.com/fourfourtwo-sales/30min" tintColor="rgba(75,139,200,0.18)" className="w-full border border-brand-blue/40 hover:border-brand-blue/70 sm:w-auto">
             <span className="flex items-center justify-center gap-2 px-8 py-3.5 text-sm uppercase tracking-[0.15em] text-[#F2F2EE]">
