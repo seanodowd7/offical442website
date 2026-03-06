@@ -93,7 +93,7 @@ export function Footer() {
             </div>
             <div className="mt-8">
               <p className="mb-3 text-xs uppercase tracking-[0.2em] text-[#F2F2EE]">
-                Contact
+                Email Us!
               </p>
               <a
                 href="mailto:fourfourtwo.sales@gmail.com"
