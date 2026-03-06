@@ -8,7 +8,7 @@ import { TubelightNavBar } from "@/components/ui/tubelight-navbar";
 import { Briefcase, Tag, Users, Mail, LayoutGrid } from "lucide-react";
 
 const navItems = [
-  { name: "Services", url: "/services",  icon: LayoutGrid },
+  { name: "Services", url: "/#our-work", icon: LayoutGrid },
   { name: "Our Work", url: "/#our-work", icon: Briefcase },
   { name: "Pricing",  url: "/#pricing",  icon: Tag },
   { name: "About",    url: "/#about",    icon: Users },
