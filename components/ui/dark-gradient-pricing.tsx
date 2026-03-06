@@ -50,11 +50,11 @@ export const PricingCard = ({
       whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut", delay: 0.15 }}
       viewport={{ once: true }}
-      className="h-full"
+      className="flex flex-col"
     >
       <div
         className={cn(
-          "relative flex h-full flex-col overflow-hidden border p-6",
+          "relative flex flex-1 flex-col overflow-hidden border p-6",
           popular
             ? "border-brand-blue/50 bg-gradient-to-br from-brand-blue/10 to-navy-900/80"
             : "border-white/[0.08] bg-gradient-to-br from-navy-950/60 to-navy-900/80",
