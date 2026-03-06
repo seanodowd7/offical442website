@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
+  { href: "/services", label: "Services" },
   { href: "/#our-work", label: "Our Work" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/#about", label: "About" },
@@ -23,7 +24,7 @@ export function Footer() {
               className="mb-5 h-14 w-auto object-contain"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#8896B0]">
-              Turning bars into soccer destinations before the 2026 World Cup and beyond
+              Turning bars into soccer destinations before the 2026 World Cup and beyond.
             </p>
           </div>
 
