@@ -53,7 +53,7 @@ export function ServicesSection() {
     <div ref={ref}>
 
       {/* Digital Services */}
-      <section className="border-b border-navy-800 py-28 lg:py-36">
+      <section id="services" className="scroll-mt-24 border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <AnimatedContainer className="mb-14">
             <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
