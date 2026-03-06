@@ -52,6 +52,39 @@ export function ServicesSection() {
   return (
     <div id="our-work" className="scroll-mt-24" ref={ref}>
 
+      {/* Digital Services */}
+      <section className="border-b border-navy-800 py-28 lg:py-36">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <AnimatedContainer className="mb-14">
+            <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
+              Digital Services
+            </span>
+            <h3
+              className="mb-4 font-display font-bold uppercase leading-tight text-[#F2F2EE]"
+              style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
+            >
+              Professional Content
+              <br />
+              For Matchday Growth
+            </h3>
+            <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
+              We create high-quality match graphics tailored to your venue and
+              targeted to local soccer fans. We handle the design and social
+              campaigns so you can focus on operations.
+            </p>
+          </AnimatedContainer>
+
+          <AnimatedContainer
+            delay={0.3}
+            className="grid grid-cols-1 divide-y border border-navy-800 sm:grid-cols-2 sm:divide-x md:grid-cols-3 divide-navy-800"
+          >
+            {digitalServices.map((service, i) => (
+              <FeatureCard key={i} feature={service} />
+            ))}
+          </AnimatedContainer>
+        </div>
+      </section>
+
       {/* Portfolio / Work Showcase */}
       <section className="border-b border-navy-800 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -133,39 +166,6 @@ export function ServicesSection() {
               </span>
             </GlassEffect>
           </div>
-        </div>
-      </section>
-
-      {/* Digital Services */}
-      <section className="border-b border-navy-800 py-28 lg:py-36">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <AnimatedContainer className="mb-14">
-            <span className="mb-6 inline-block border border-brand-blue bg-brand-blue/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-blue">
-              Digital Services
-            </span>
-            <h3
-              className="mb-4 font-display font-bold uppercase leading-tight text-[#F2F2EE]"
-              style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
-            >
-              Professional Content
-              <br />
-              For Matchday Growth
-            </h3>
-            <p className="max-w-2xl text-sm leading-relaxed text-[#8896B0] sm:text-base">
-              We create high-quality match graphics tailored to your venue and
-              targeted to local soccer fans. We handle the design and social
-              campaigns so you can focus on operations.
-            </p>
-          </AnimatedContainer>
-
-          <AnimatedContainer
-            delay={0.3}
-            className="grid grid-cols-1 divide-y border border-navy-800 sm:grid-cols-2 sm:divide-x md:grid-cols-3 divide-navy-800"
-          >
-            {digitalServices.map((service, i) => (
-              <FeatureCard key={i} feature={service} />
-            ))}
-          </AnimatedContainer>
         </div>
       </section>
     </div>
