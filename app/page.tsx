@@ -125,10 +125,11 @@ export default function HomePage() {
                   American soil.
                 </p>
                 <p>
-                  We&apos;re an Irish family and lifelong Leeds United fans. Soccer
-                  has been part of our lives since before we could walk. We understand
-                  the culture, the matchday energy, and what it takes to make a bar
-                  feel like a real supporter&apos;s home.
+                  We provide a blend of soccer knowledge and advertising expertise.
+                  From early morning Premier League kickoffs to Champions League nights,
+                  we know what gets fans through the door. We help bars and restaurants
+                  turn those matches into real matchday atmospheres through simple,
+                  consistent marketing.
                 </p>
                 <p>
                   When the 2026 World Cup was awarded to the United States, everything
