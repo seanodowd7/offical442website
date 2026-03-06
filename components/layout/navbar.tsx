@@ -54,9 +54,9 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="4-4-2 Marketing"
-              width={48}
-              height={48}
-              className="h-12 w-auto object-contain"
+              width={64}
+              height={64}
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>

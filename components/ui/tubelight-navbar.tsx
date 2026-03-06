@@ -18,7 +18,7 @@ interface NavBarProps {
 }
 
 export function TubelightNavBar({ items, className }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(items[0].name);
+  const [activeTab, setActiveTab] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export function TubelightNavBar({ items, className }: NavBarProps) {
     >
       {items.map((item) => {
         const Icon = item.icon;
-        const isActive = activeTab === item.name;
+        const isActive = activeTab !== null && activeTab === item.name;
 
         return (
           <Link
