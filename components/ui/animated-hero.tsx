@@ -9,8 +9,8 @@ import NeuralBackground from "@/components/ui/flow-field-background";
 const titles = [
   "packed matchdays",
   "soccer fans",
-  "Premier League",
-  "Champions League",
+  "Premier League crowds",
+  "Champions League nights",
   "The World Cup",
 ];
 
@@ -26,33 +26,24 @@ function RotatingWord() {
   }, []);
 
   return (
-    <div
-      className="relative mt-1 w-full overflow-hidden"
-      style={{ height: "clamp(2.8rem, 8.5vw, 8rem)" }}
-    >
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={currentIndex}
-          initial={{ opacity: 0, y: "80%" }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: "-80%" }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 flex items-center justify-center font-display font-extrabold uppercase"
-          style={{
-            fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
-            letterSpacing: "-0.01em",
-            lineHeight: 1.0,
-            whiteSpace: "nowrap",
-            background: "linear-gradient(90deg, #FFB800, #FFE066, #C8A951)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          {titles[currentIndex]}
-        </motion.span>
-      </AnimatePresence>
-    </div>
+    <AnimatePresence mode="wait">
+      <motion.span
+        key={currentIndex}
+        initial={{ opacity: 0, y: "0.3em" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "-0.3em" }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        style={{
+          display: "inline-block",
+          background: "linear-gradient(90deg, #FFB800, #FFE066, #C8A951)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
+        {titles[currentIndex]}
+      </motion.span>
+    </AnimatePresence>
   );
 }
 
@@ -110,21 +101,20 @@ export function AnimatedHero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
         >
           <h1
-            className="font-display font-extrabold uppercase leading-none text-white"
+            className="font-display font-extrabold uppercase leading-none text-white text-center"
             style={{
               fontSize: "clamp(2.2rem, 7vw, 6.5rem)",
               letterSpacing: "-0.01em",
-              lineHeight: 1.0,
+              lineHeight: 1.1,
             }}
           >
             Turn your bar into
             <br />
             the home for
+            <br />
+            <RotatingWord />
           </h1>
         </motion.div>
-
-        {/* Rotating word — isolated so re-renders stay contained */}
-        <RotatingWord />
 
         {/* Subtitle */}
         <motion.p
